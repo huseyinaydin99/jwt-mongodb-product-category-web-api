@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using ProductWebAPI.DTOs.ProductDTOs;
 using ProductWebAPI.Services.ProductServices;
 
@@ -16,6 +17,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetProductList()
         {
             var values = await _productService.GetAllProductAsync();
@@ -23,6 +25,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetProductById(string productId)
         {
             var values = await _productService.GetByIdProductAsync(productId);
@@ -30,6 +33,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateProduct(CreateProductDTO createProductDTO)
         {
             var values = await _productService.CreateProductAsync(createProductDTO);
@@ -37,6 +41,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public async Task<IActionResult> DeleteProduct(string productId)
         {
             await _productService.DeleteProductAsync(productId);
@@ -44,6 +49,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public async Task<IActionResult> UpdateProduct(UpdateProductDTO updateProductDTO)
         {
             await _productService.UpdateProductAsync(updateProductDTO);

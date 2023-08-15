@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductWebAPI.DTOs.CategoryDTOs;
 using ProductWebAPI.Services.CategoryServices;
@@ -17,6 +18,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetCategoryList()
         {
             var values = await _categoryService.GetAllCategoryAsync();
@@ -24,6 +26,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetCategoryById(string categoryId)
         {
             var values = await _categoryService.GetByIdCategoryAsync(categoryId);
@@ -31,6 +34,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateCategory(CreateCategoryDTO createCategoryDTO)
         {
             var values = await _categoryService.CreateCategoryAsync(createCategoryDTO);
@@ -38,6 +42,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public async Task<IActionResult> DeleteCategory(string categoryId)
         {
             await _categoryService.DeleteCategoryAsync(categoryId);
@@ -45,6 +50,7 @@ namespace ProductWebAPI.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryDTO updateCategoryDTO)
         {
             await _categoryService.UpdateCategoryAsync(updateCategoryDTO);

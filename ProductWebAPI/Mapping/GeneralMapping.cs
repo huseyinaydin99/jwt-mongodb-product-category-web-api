@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using CasgemMicroservice.Services.Catalog.Models;
 using ProductWebAPI.DTOs.CategoryDTOs;
 using ProductWebAPI.DTOs.ProductDTOs;
+using ProductWebAPI.Models;
 
 namespace ProductWebAPI.Mapping
 {

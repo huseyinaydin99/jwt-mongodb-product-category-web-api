@@ -1,6 +1,10 @@
+using CasgemMicroservice.Catalog.Settings.Abstracts;
+using CasgemMicroservice.Services.Catalog.Settings.Abstracts;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using ProductWebAPI.Services.CategoryServices;
+using ProductWebAPI.Services.ProductServices;
 using System.Reflection;
 using System.Text;
 

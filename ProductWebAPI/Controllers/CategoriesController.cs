@@ -1,7 +1,7 @@
-﻿using CasgemMicroservice.Services.Catalog.DTOs.CategoryDTOs;
-using CasgemMicroservice.Services.Catalog.Services.CategoryServices;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ProductWebAPI.DTOs.CategoryDTOs;
+using ProductWebAPI.Services.CategoryServices;
 
 namespace ProductWebAPI.Controllers
 {

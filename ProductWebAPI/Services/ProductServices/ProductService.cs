@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
-using Casgem.MicroService.Shared.DTOs;
 using CasgemMicroservice.Catalog.Settings.Abstracts;
-using CasgemMicroservice.Services.Catalog.DTOs.CategoryDTOs;
-using CasgemMicroservice.Services.Catalog.DTOs.ProductDTOs;
-using CasgemMicroservice.Services.Catalog.Models;
-using CasgemMicroservice.Shared.DTOs;
 using MongoDB.Driver;
+using ProductWebAPI.DTOs.ProductDTOs;
+using ProductWebAPI.DTOs.ResponseDTOs;
+using ProductWebAPI.Models;
 
-namespace CasgemMicroservice.Services.Catalog.Services.ProductServices
+namespace ProductWebAPI.Services.ProductServices
 {
     public class ProductService : IProductService
     {

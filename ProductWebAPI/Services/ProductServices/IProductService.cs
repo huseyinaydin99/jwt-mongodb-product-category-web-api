@@ -1,9 +1,7 @@
-﻿using Casgem.MicroService.Shared.DTOs;
-using CasgemMicroservice.Services.Catalog.DTOs.CategoryDTOs;
-using CasgemMicroservice.Services.Catalog.DTOs.ProductDTOs;
-using CasgemMicroservice.Shared.DTOs;
+﻿using ProductWebAPI.DTOs.ProductDTOs;
+using ProductWebAPI.DTOs.ResponseDTOs;
 
-namespace CasgemMicroservice.Services.Catalog.Services.ProductServices
+namespace ProductWebAPI.Services.ProductServices
 {
     public interface IProductService
     {

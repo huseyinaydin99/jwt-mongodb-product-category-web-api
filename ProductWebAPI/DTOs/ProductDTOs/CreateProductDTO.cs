@@ -1,5 +1,4 @@
-﻿using CasgemMicroservice.Services.Catalog.Models;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
 namespace ProductWebAPI.DTOs.ProductDTOs
 {
